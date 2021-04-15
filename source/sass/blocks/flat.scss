@@ -64,7 +64,7 @@
 
 .flat__params {
   @include ul();
-  margin: 9px 0 auto;
+  margin: 9px 0 12px;
   display: grid;
   grid-template-columns: repeat(3, 120px);
   grid-column-gap: 24px;
