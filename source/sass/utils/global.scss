@@ -1,0 +1,33 @@
+html {
+  @include font();
+}
+
+body {
+  @include font(1.6rem, 2rem, 400);
+  @include fields();
+  position: relative;
+  min-width: $mobile;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: $font;
+  background-color: $white;
+  color: $dark;
+  overflow-x: hidden;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

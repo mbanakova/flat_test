@@ -1,0 +1,220 @@
+.flat {
+  padding: 24px 32px 24px 24px;
+  background-color: $white;
+  border-radius: 8px;
+  position: relative;
+  min-height: 226px;
+  display: grid;
+  grid-template-columns: max-content 1fr 268px;
+  grid-column-gap: 32px;
+}
+
+.flat__delete {
+  @include button();
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #c4c4c4;
+  }
+
+  &:hover {
+    background-color: $grey-40;
+    transition: 0.3s ease;
+
+    & svg {
+      fill: $dark;
+    }
+  }
+
+  &:active {
+    background-color: $grey-100;
+    transition: 0.3s ease;
+  }
+}
+
+.flat__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flat__description {
+  border-right: 1px solid $grey-line;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flat__description h2 {
+  @include fields();
+  @include font(2.4rem, 3.6rem, 700);
+}
+
+.flat__params {
+  @include ul();
+  margin: 9px 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-column-gap: 24px;
+  grid-row-gap: 12px;
+}
+
+.flat__params h3 {
+  @include fields();
+  @include font(1.2rem, 1.6rem, 400);
+  color: $grey-400;
+}
+
+.flat__params p {
+  @include fields();
+  @include font(1.4rem, 2rem, 500);
+}
+
+.flat__tags p {
+  @include fields();
+}
+
+.flat__price {
+  @include font(1.4rem, 2rem, 500);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $grey-400;
+}
+
+.flat__price p {
+  &:first-of-type {
+    @include fields();
+    margin-bottom: 1px;
+  }
+
+  &:last-of-type {
+    @include fields();
+    max-width: 200px;
+  }
+}
+
+.flat__hot-price {
+  @include font(2.4rem, 3.6rem, 700);
+  @include fields();
+  margin-bottom: 14px;
+  color: $dark;
+}
+
+.flat__price time {
+  @include fields();
+  color: $blue;
+}
+
+.flat__developer-price {
+  color: $red;
+}
+
+.flat__currency {
+  color: inherit;
+}
+
+.flat__button {
+  margin-top: auto;
+}
+
+@media (max-width: $desktop-large) {
+  .flat__img {
+    align-items: flex-start;
+  }
+
+  .flat__params {
+    grid-template-columns: repeat(2, 125px);
+    grid-column-gap: 20px;
+    grid-row-gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .flat__params li:nth-of-type(3) {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+}
+
+@media (max-width: $desktop-small) {
+  .flat {
+    padding: 24px 29px 24px 24px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 23px;
+  }
+
+  .flat__delete {
+    top: 14px;
+  }
+
+  .flat__description {
+    border: none;
+  }
+
+  .flat__price {
+    padding-top: 24px;
+    padding-left: 8px;
+    border-top: 1px solid $grey-line;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .flat__button {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .flat {
+    padding: 16px 20px 20px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 16px;
+  }
+
+  .flat__description {
+    margin-bottom: 4px;
+  }
+
+  .flat__description h2 {
+    @include font(2rem, 2.8rem, 700);
+  }
+
+  .flat__params {
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    margin: 15px 0 16px;
+  }
+
+  .flat__params h3 {
+    margin-bottom: 1px;
+  }
+
+  .flat__price {
+    padding: 20px 0 0;
+    border-top: 1px solid #f0eeeb;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .flat__hot-price {
+    @include font(2rem, 2.8rem, 700);
+    margin-top: -2px;
+  }
+
+  .flat__button {
+    margin-top: 16px;
+  }
+}

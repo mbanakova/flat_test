@@ -1,0 +1,44 @@
+.tags {
+  @include ul();
+  @include font(1.2rem, 1.6rem, 500);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tags__item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 16px 8px 14px;
+  border-radius: 22px;
+
+  &--green {
+    background-color: rgba($green, 0.1);
+    color: $green;
+  }
+
+  &--red {
+    background-color: rgba($red, 0.1);
+    color: $red;
+  }
+}
+
+@media (max-width: $desktop-large) {
+  .tags {
+    gap: 8px;
+  }
+}
+
+@media (max-width: $desktop-small) {
+  .tags {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .tags {
+    gap: 8px;
+  }
+}
