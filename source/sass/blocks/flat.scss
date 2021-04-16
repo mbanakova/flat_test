@@ -146,6 +146,10 @@
     grid-column-start: 2;
     grid-row-start: 2;
   }
+
+  .flat__description {
+    padding-right: 24px;
+  }
 }
 
 @media (max-width: $desktop-small) {
@@ -163,6 +167,7 @@
 
   .flat__description {
     border: none;
+    padding-right: 0;
   }
 
   .flat__price {
