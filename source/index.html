@@ -22,6 +22,7 @@
     <title>НМАРКЕТ</title>
   </head>
   <body>
+    <h1 class="visually-hidden">Тестовое задание для НМАРКЕТ</h1>
     <div class="container">
       <section class="flat">
         <button class="flat__delete" type="button" aria-label="закрыть">
@@ -51,31 +52,31 @@
           </picture>
         </div>
         <div class="flat__description">
-          <h2>2-к квартира</h2>
+          <h2 class="flat__title">2-к квартира</h2>
           <ul class="flat__params">
-            <li>
-              <h3>Этаж</h3>
-              <p>3 из 19</p>
+            <li class="flat__parameter">
+              <h3 class="flat__parameter-title">Этаж</h3>
+              <p class="flat__parameter-text">3 из 19</p>
             </li>
-            <li>
-              <h3>Высота потолков</h3>
-              <p>3,2 м</p>
+            <li class="flat__parameter">
+              <h3 class="flat__parameter-title">Высота потолков</h3>
+              <p class="flat__parameter-text">3,2 м</p>
             </li>
-            <li>
-              <h3>Отделка</h3>
-              <p>Предчистовая</p>
+            <li class="flat__parameter">
+              <h3 class="flat__parameter-title">Отделка</h3>
+              <p class="flat__parameter-text">Предчистовая</p>
             </li>
-            <li>
-              <h3>Общая площадь</h3>
-              <p>32,24 м²</p>
+            <li class="flat__parameter">
+              <h3 class="flat__parameter-title">Общая площадь</h3>
+              <p class="flat__parameter-text">32,24 м²</p>
             </li>
-            <li>
-              <h3>Жилая площадь</h3>
-              <p>22,24 м²</p>
+            <li class="flat__parameter">
+              <h3 class="flat__parameter-title">Жилая площадь</h3>
+              <p class="flat__parameter-text">22,24 м²</p>
             </li>
-            <li>
-              <h3>Площадь кухни</h3>
-              <p>14,24 м²</p>
+            <li class="flat__parameter">
+              <h3 class="flat__parameter-title">Площадь кухни</h3>
+              <p class="flat__parameter-text">14,24 м²</p>
             </li>
           </ul>
           <ul class="flat__tags tags">
@@ -89,7 +90,7 @@
               >
                 <use xlink:href="img/sprite.svg#icon-check"></use>
               </svg>
-              <p>Вы были на просмотре</p>
+              <p class="tags__text">Вы были на просмотре</p>
             </li>
             <li class="tags__item tags__item--red">
               <svg
@@ -101,22 +102,23 @@
               >
                 <use xlink:href="img/sprite.svg#icon-cross"></use>
               </svg>
-              <p>Дом аккредитован другим банком</p>
+              <p class="tags__text">Дом аккредитован другим банком</p>
             </li>
           </ul>
         </div>
         <div class="flat__price">
-          <p>
+          <p class="flat__offer">
             Ваша цена по брони до <time datetime="2021-09-19">19 сентября</time>
           </p>
           <div class="flat__hot-price">
-            <span class="flat__value">3312666</span>
+            <span class="flat__value js-formatted-price">3312666</span>
             <span class="flat__currency">Р</span>
           </div>
-          <p>
+          <p class="flat__current">
             Текущая цена у застройщика дороже на
             <span class="flat__developer-price"
-              ><span class="flat__developer-value">324825</span
+              ><span class="flat__developer-value js-formatted-price"
+                >324825</span
               ><span class="flat__currency">&nbsp;Р</span></span
             >
           </p>

@@ -1,14 +1,13 @@
 "use strict";
 
 (function () {
-  let hotPrice = document.querySelector(".flat__value");
-  let developerPrice = document.querySelector(".flat__developer-value");
-
-  function splitPrice(elem) {
-    return elem.innerHTML.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  function splitPrice(price) {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
 
-  hotPrice.innerHTML = splitPrice(hotPrice);
-  developerPrice.innerHTML = splitPrice(developerPrice);
+  let priceSpan = document.querySelectorAll(".js-formatted-price");
+  priceSpan.forEach(span => {
+    span.textContent = splitPrice(span.textContent);
+  });
 })();
 //# sourceMappingURL=script.js.map

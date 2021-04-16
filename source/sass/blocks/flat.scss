@@ -27,6 +27,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     fill: #c4c4c4;
+    flex-shrink: 0;
   }
 
   &:hover {
@@ -55,34 +56,35 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-right: 24px;
 }
 
-.flat__description h2 {
+.flat__title {
   @include fields();
   @include font(2.4rem, 3.6rem, 700);
 }
 
 .flat__params {
   @include ul();
-  margin: 9px 0 12px;
+  margin: 2px 0 12px;
   display: grid;
   grid-template-columns: repeat(3, 120px);
   grid-column-gap: 24px;
   grid-row-gap: 12px;
 }
 
-.flat__params h3 {
+.flat__parameter-title {
   @include fields();
   @include font(1.2rem, 1.6rem, 400);
   color: $grey-400;
 }
 
-.flat__params p {
+.flat__parameter-text {
   @include fields();
   @include font(1.4rem, 2rem, 500);
 }
 
-.flat__tags p {
+.tags__text {
   @include fields();
 }
 
@@ -94,16 +96,14 @@
   color: $grey-400;
 }
 
-.flat__price p {
-  &:first-of-type {
-    @include fields();
-    margin-bottom: 1px;
-  }
+.flat__current {
+  @include fields();
+  max-width: 200px;
+}
 
-  &:last-of-type {
-    @include fields();
-    max-width: 200px;
-  }
+.flat__offer {
+  @include fields();
+  margin-bottom: 1px;
 }
 
 .flat__hot-price {
@@ -139,16 +139,13 @@
     grid-template-columns: repeat(2, 125px);
     grid-column-gap: 20px;
     grid-row-gap: 12px;
+    margin-top: 9px;
     margin-bottom: 18px;
   }
 
-  .flat__params li:nth-of-type(3) {
+  .flat__parameter:nth-of-type(3) {
     grid-column-start: 2;
     grid-row-start: 2;
-  }
-
-  .flat__description {
-    padding-right: 24px;
   }
 }
 
@@ -194,7 +191,7 @@
     margin-bottom: 4px;
   }
 
-  .flat__description h2 {
+  .flat__title {
     @include font(2rem, 2.8rem, 700);
   }
 
@@ -203,7 +200,7 @@
     margin: 15px 0 16px;
   }
 
-  .flat__params h3 {
+  .flat__parameter-title {
     margin-bottom: 1px;
   }
 
